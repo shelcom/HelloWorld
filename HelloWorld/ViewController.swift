@@ -18,6 +18,12 @@ class ViewController: UIViewController {
       toggleButton.layer.cornerRadius = 10
    }
    @IBAction func tryClick() {
-      
+      if helloWorldLabel.isHidden {
+         helloWorldLabel.isHidden = false
+         toggleButton.setTitle("Hide Text", for: .normal)
+      } else {
+         helloWorldLabel.isHidden = true
+         toggleButton.setTitle("Show Text", for: .normal)
+      }
    }
 }
